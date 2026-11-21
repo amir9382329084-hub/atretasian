@@ -49,3 +49,71 @@ footer{background:#292722;color:#e9e0d4;padding:45px 24px 20px}.footerGrid{max-w
 .accountActions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
 .accountActions a,.accountActions button{border:1px solid #d8c6aa;background:#fffaf2;color:#755a35;padding:11px 18px;border-radius:999px;text-decoration:none;font:inherit;cursor:pointer}
 @media(max-width:600px){.authCard{padding:22px}.accountPanel{margin:25px 14px;padding:20px}.accountRow{display:grid;gap:5px}}
+
+
+/* ===== TASIAN RESPONSIVE FINISHING LAYER ===== */
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+img, video, iframe { max-width: 100%; }
+button, a, input, textarea, select { touch-action: manipulation; }
+body { overflow-x: hidden; }
+.headrow, .navinner, .hero, .section, .content, footer { min-width: 0; }
+.productGrid > *, .categoryGrid > *, .benefits > *, .footerGrid > * { min-width: 0; }
+.productPhoto img, .category img, .editorialImg img { max-width: 100%; }
+
+/* Tablet */
+@media (max-width: 900px) {
+  .content { padding-left: 18px; padding-right: 18px; }
+  .contactGrid { gap: 18px; }
+  .footerGrid { gap: 22px; }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  body { font-size: 14px; }
+  .headrow { padding: 12px 12px; gap: 8px; }
+  .brand strong { font-size: 19px; }
+  .actions { gap: 5px; }
+  .actions .action { padding: 7px 5px; }
+  .navinner { padding: 0 12px 10px; gap: 16px; scrollbar-width: none; }
+  .navinner::-webkit-scrollbar { display: none; }
+  .hero { padding: 0 10px; }
+  .heroBox { min-height: 300px; background-position: 62% center; }
+  .heroText { padding: 26px 6%; max-width: 92%; }
+  .hero h1 { font-size: clamp(23px, 7vw, 30px); line-height: 1.5; }
+  .hero p { font-size: 11px; line-height: 2; }
+  .benefits { gap: 10px; }
+  .benefits > * { padding: 12px 8px; }
+  .sectionHead { gap: 10px; align-items: end; }
+  .sectionHead h2 { font-size: 20px; }
+  .categoryGrid { gap: 9px; }
+  .category { min-height: 150px; height: auto; }
+  .productGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .product { min-width: 0; padding: 5px; }
+  .productPhoto { height: clamp(135px, 43vw, 190px); }
+  .product h3, .product .productName { overflow-wrap: anywhere; }
+  .editorial { margin-left: 10px; margin-right: 10px; }
+  .editorialText { padding: 24px 18px; }
+  .content { margin-top: 28px; padding: 0 14px; }
+  .contactGrid { grid-template-columns: minmax(0, 1fr); }
+  .formbox { padding: 18px; }
+  .authWrap { margin: 25px auto 45px; padding: 0 12px; }
+  .authCard { padding: 20px 16px; border-radius: 18px; }
+  .accountPanel { margin: 22px 12px 45px; padding: 18px 15px; }
+  .accountRow { grid-template-columns: 1fr; gap: 5px; }
+  .accountActions { gap: 8px; }
+  .accountActions a, .accountActions button { flex: 1 1 auto; text-align: center; }
+  .cart-empty { padding: 38px 16px; }
+  .footerGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 14px; }
+  footer { padding: 32px 15px 18px; }
+  .toast { left: 12px; right: 12px; bottom: 12px; text-align: center; }
+}
+
+/* Very narrow phones */
+@media (max-width: 360px) {
+  .headrow { grid-template-columns: 1fr auto; }
+  .headrow .brand { grid-column: 1; }
+  .headrow .actions { grid-column: 2; }
+  .brand strong { font-size: 17px; }
+  .productPhoto { height: 128px; }
+  .footerGrid { grid-template-columns: 1fr 1fr; }
+}
